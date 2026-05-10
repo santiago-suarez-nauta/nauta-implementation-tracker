@@ -219,30 +219,24 @@ a {{ color: var(--nauta-blue); text-decoration: none; }}
 }}
 .brand {{
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
 }}
-.brand .logo {{
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: -0.02em;
-  color: white;
+.brand img.logo {{
+  height: 28px;
+  width: auto;
+  display: block;
 }}
-.brand .logo::before {{
-  content: '';
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: var(--nauta-blue);
-  border-radius: 2px;
-  margin-right: 8px;
-  transform: translateY(-1px);
+.brand .divider {{
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.18);
 }}
 .brand .product {{
-  font-weight: 500;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }}
 .topbar-stats {{
@@ -473,7 +467,8 @@ footer {{
 
 <div class="topbar">
   <div class="brand">
-    <span class="logo">Nauta</span>
+    <img class="logo" src="assets/nauta-logo.png" alt="Nauta">
+    <span class="divider"></span>
     <span class="product">Implementation Tracker</span>
   </div>
   <div class="topbar-stats">
