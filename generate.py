@@ -136,6 +136,9 @@ def load_clients():
         tarea = clean(row[colt.get("Tarea", -1)])
         if not tarea:
             continue
+        # "X" / "x" en Last Week = placeholder, se trata como vacío.
+        lw_raw = clean(row[colt.get("Last Week", -1)])
+        lw = "" if lw_raw.strip().upper() == "X" else lw_raw
         by_client[cname].append({
             "t": tarea,
             "r": clean(row[colt.get("Responsabilidad", -1)]),
@@ -145,7 +148,7 @@ def load_clients():
             "p": clean(row[colt.get("Prioridad", -1)]),
             "ri": clean(row[colt.get("Riesgos", -1)]),
             "ns": clean(row[colt.get("Next Steps", -1)]),
-            "lw": clean(row[colt.get("Last Week", -1)]),
+            "lw": lw,
         })
 
     # Compose final list
