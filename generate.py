@@ -23,6 +23,21 @@ EXCLUDE_STAGES = ("8.",)  # exclude clients in "8. Handover Externo"
 OWNER_FILTER = {"ss", "SS", "Ss", "sS"}
 EXCLUDE_CLIENTS = {"AC BRAND"}  # one-off exclusion (clear when no longer needed)
 
+# One-off % overrides — do NOT touch the xlsx. Clear to fall back to xlsx values.
+PCT_OVERRIDES = {
+    "SUPERMERCADOS SELECTOS":  60,
+    "PATIO GALLERY":           20,
+    "IMCD PR":                 80,
+    "PR SUPPLIES":             80,
+    "SEAWORLD":                80,
+    "PIAZZA INTERNATIONAL":    80,
+    "PAN AMERICAN GRAIN":      20,
+    "INTERNATIONAL MATERIALS": 80,
+    "CIB":                     10,
+    "FINE WINES":              25,
+    "FLATBOX":                 15,
+}
+
 
 def to_pct(raw):
     """Parse % avance — accepts '50%', 0.5, 50, '50'."""
@@ -105,7 +120,7 @@ def load_clients():
 
         handover = clean(row[col["Handover"]])
         status = clean(row[col["Status"]]) or "En Progreso"
-        pct = to_pct(row[col["% Avance"]]) or fallback_pct(stage, handover)
+        pct = PCT_OVERRIDES.get(name.upper(), to_pct(row[col["% Avance"]]) or fallback_pct(stage, handover))
 
         clients_meta[name] = {
             "n": name,
