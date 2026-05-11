@@ -532,25 +532,26 @@ function renderClient(k) {{
   const m = document.getElementById('main');
   const handoverChip = c.handover ? `<span class="handover-chip">${{esc(c.handover)}}</span>` : '';
 
+  // Always-shown cards: etapa + blocker (con "sin bloqueos" cuando vacío es útil).
+  // Resto: solo se muestran si tienen valor real.
   const cards = [
-    {{ h: 'Etapa', v: `<span class="stage-chip">${{esc(c.st)}}</span>${{handoverChip}}` }},
-    {{ h: 'OB Lead',  v: esc(c.ob_lead) || '<span class="val muted">—</span>' }},
-    {{ h: 'KAM',      v: esc(c.kam) || '<span class="val muted">—</span>' }},
-    {{ h: 'Blocker principal', v: esc(c.blocker) || '<span class="val muted">sin bloqueos</span>' }},
-    {{ h: 'Siguiente acción',  v: esc(c.next_action) || '<span class="val muted">—</span>' }},
-    {{ h: 'Pain points',       v: esc(c.pain_points) || '<span class="val muted">—</span>' }},
-  ];
+    {{ h: 'Etapa', v: `<span class="stage-chip">${{esc(c.st)}}</span>${{handoverChip}}`, always: true }},
+    {{ h: 'OB Lead',           v: esc(c.ob_lead) }},
+    {{ h: 'KAM',               v: esc(c.kam) }},
+    {{ h: 'Blocker principal', v: esc(c.blocker) || '<span class="val muted">sin bloqueos</span>', always: true }},
+    {{ h: 'Siguiente acción',  v: esc(c.next_action) }},
+    {{ h: 'Pain points',       v: esc(c.pain_points) }},
+  ].filter(x => x.always || (x.v && x.v.trim()));
   const cardsHTML = cards.map(x => `
     <div class="card"><h4>${{x.h}}</h4><div class="val">${{x.v}}</div></div>`).join('');
 
+  // Sections (Next steps / Riesgos / Last week): si no hay items, no se renderiza la sección.
   function section(title, items) {{
-    const body = items.length
-      ? `<ul>${{items.map(i => `<li>${{esc(i)}}</li>`).join('')}}</ul>`
-      : `<div class="empty">Sin registros</div>`;
+    if (!items.length) return '';
     return `
       <div class="section">
         <header><h3>${{title}}</h3><span class="count">${{items.length}}</span></header>
-        <div class="body">${{body}}</div>
+        <div class="body"><ul>${{items.map(i => `<li>${{esc(i)}}</li>`).join('')}}</ul></div>
       </div>`;
   }}
 
