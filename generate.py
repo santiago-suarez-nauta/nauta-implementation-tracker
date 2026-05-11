@@ -21,6 +21,7 @@ OUT = ROOT / "index.html"
 
 EXCLUDE_STAGES = ("8.",)  # exclude clients in "8. Handover Externo"
 OWNER_FILTER = {"ss", "SS", "Ss", "sS"}
+EXCLUDE_CLIENTS = {"AC BRAND"}  # one-off exclusion (clear when no longer needed)
 
 
 def to_pct(raw):
@@ -96,6 +97,8 @@ def load_clients():
             continue
 
         name = str(row[col["Cliente"]]).strip()
+        if name.upper() in {c.upper() for c in EXCLUDE_CLIENTS}:
+            continue
         stage = clean(row[col["Etapa Actual"]])
         if not stage or any(stage.startswith(x) for x in EXCLUDE_STAGES):
             continue
