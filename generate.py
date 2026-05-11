@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent
 XLSX = ROOT / "data" / "Nauta_Implementation_Tracker.xlsx"
 OUT = ROOT / "index.html"
 
-EXCLUDE_STAGES = ()  # include all stages — owner filter alone is enough
+EXCLUDE_STAGES = ("8.",)  # exclude clients in "8. Handover Externo"
 OWNER_FILTER = {"ss", "SS", "Ss", "sS"}
 
 
