@@ -42,39 +42,21 @@ a { color: var(--nauta-blue); text-decoration: none; }
   justify-content: space-between;
   box-shadow: 0 1px 6px rgba(15,27,61,0.12);
 }
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.brand img.logo {
-  height: 28px;
-  width: auto;
-  display: block;
-}
-.brand .divider {
-  width: 1px;
-  height: 18px;
-  background: rgba(255,255,255,0.18);
-}
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand img.logo { height: 28px; width: auto; display: block; }
+.brand .divider { width: 1px; height: 18px; background: rgba(255,255,255,0.18); }
 .brand .product {
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 600; font-size: 12px;
   color: rgba(255,255,255,0.78);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em; text-transform: uppercase;
 }
-.topbar-stats {
-  display: flex;
-  gap: 24px;
-  font-size: 12px;
-}
+.topbar-stats { display: flex; gap: 24px; font-size: 12px; }
 .topbar-stats span b { color: white; font-weight: 700; }
 .topbar-stats span { color: rgba(255,255,255,0.65); }
 
 .layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 300px 1fr;
   height: calc(100vh - 56px);
 }
 
@@ -85,18 +67,14 @@ a { color: var(--nauta-blue); text-decoration: none; }
   padding: 16px 0;
 }
 .sidebar h3 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--nauta-muted);
-  padding: 0 20px 8px;
-  font-weight: 700;
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--nauta-muted);
+  padding: 0 20px 8px; font-weight: 700;
 }
 .client-item {
   padding: 12px 20px;
   border-left: 3px solid transparent;
-  cursor: pointer;
-  transition: background 0.15s;
+  cursor: pointer; transition: background 0.15s;
 }
 .client-item:hover { background: var(--nauta-bg); }
 .client-item.active {
@@ -104,32 +82,27 @@ a { color: var(--nauta-blue); text-decoration: none; }
   border-left-color: var(--nauta-blue);
 }
 .client-item .name {
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--nauta-text);
-  margin-bottom: 4px;
+  font-weight: 600; font-size: 13px;
+  color: var(--nauta-text); margin-bottom: 4px;
 }
 .client-item .meta {
-  font-size: 11px;
-  color: var(--nauta-muted);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 11px; color: var(--nauta-muted);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.client-item .ho-date {
+  font-size: 11px; color: var(--nauta-muted);
+  margin-top: 4px; font-weight: 500;
 }
 .bar {
-  width: 100%;
-  height: 4px;
+  width: 100%; height: 4px;
   background: var(--nauta-border);
-  border-radius: 99px;
-  overflow: hidden;
+  border-radius: 99px; overflow: hidden;
   margin-top: 6px;
 }
 .bar > div { height: 100%; background: var(--nauta-blue); }
 
-.main {
-  overflow-y: auto;
-  padding: 28px 36px;
-}
+.main { overflow-y: auto; padding: 28px 36px; }
+
 .client-header {
   display: flex;
   justify-content: space-between;
@@ -139,47 +112,41 @@ a { color: var(--nauta-blue); text-decoration: none; }
   border-bottom: 1px solid var(--nauta-border);
 }
 .client-header h1 {
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
+  font-size: 26px; font-weight: 800;
+  letter-spacing: -0.02em; margin-bottom: 6px;
 }
-.client-header .sub {
-  color: var(--nauta-muted);
-  font-size: 13px;
-}
-.client-header .progress {
-  text-align: right;
-  min-width: 200px;
-}
+.client-header .sub { color: var(--nauta-muted); font-size: 13px; }
+.client-header .progress { text-align: right; min-width: 200px; }
 .client-header .progress .pct {
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 32px; font-weight: 800;
   color: var(--nauta-blue);
 }
 .client-header .progress .lbl {
-  font-size: 11px;
-  color: var(--nauta-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-size: 11px; color: var(--nauta-muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
 }
 
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
 .card {
   background: var(--nauta-card);
   border: 1px solid var(--nauta-border);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 12px; padding: 16px;
+}
+.card.highlight {
+  background: linear-gradient(135deg, rgba(74,108,247,0.08) 0%, rgba(74,108,247,0.02) 100%);
+  border-color: rgba(74,108,247,0.3);
 }
 .card h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--nauta-muted);
-  margin-bottom: 8px;
-  font-weight: 700;
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--nauta-muted);
+  margin-bottom: 8px; font-weight: 700;
 }
 .card .val { font-size: 16px; font-weight: 600; color: var(--nauta-text); }
+.card .val.big { font-size: 18px; font-weight: 700; color: var(--nauta-blue); }
 .card .val.muted { color: var(--nauta-muted); font-weight: 400; font-style: italic; }
 
 .section {
@@ -189,22 +156,25 @@ a { color: var(--nauta-blue); text-decoration: none; }
   margin-bottom: 16px;
   overflow: hidden;
 }
+.section.feature {
+  border-color: rgba(74,108,247,0.4);
+  box-shadow: 0 2px 12px rgba(74,108,247,0.06);
+}
 .section header {
   padding: 14px 18px;
   background: var(--nauta-card);
   border-bottom: 1px solid var(--nauta-border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.section.feature header {
+  background: linear-gradient(90deg, rgba(74,108,247,0.06) 0%, transparent 100%);
 }
 .section header h3 { font-size: 14px; font-weight: 700; }
+.section.feature header h3 { color: var(--nauta-blue); font-size: 15px; }
 .section header .count {
   background: var(--nauta-bg);
-  border-radius: 99px;
-  padding: 2px 10px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--nauta-muted);
+  border-radius: 99px; padding: 2px 10px;
+  font-size: 12px; font-weight: 600; color: var(--nauta-muted);
 }
 .section .body { padding: 4px 0; }
 .section ul { list-style: none; }
@@ -215,24 +185,134 @@ a { color: var(--nauta-blue); text-decoration: none; }
 }
 .section ul li:last-child { border-bottom: none; }
 
-table.tasks {
-  width: 100%;
-  border-collapse: collapse;
+/* Feature list (Pains / KPI) — numbered items, clean spacing */
+.feature-list { padding: 8px 0; }
+.feature-item {
+  display: flex;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--nauta-bg);
 }
-table.tasks thead th {
-  text-align: left;
-  padding: 10px 14px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.feature-item:last-child { border-bottom: none; }
+.feature-num {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(74,108,247,0.10);
+  color: var(--nauta-blue);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.feature-content { flex: 1; min-width: 0; }
+.feature-main {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--nauta-text);
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+.feature-arrow {
+  font-size: 13px;
   color: var(--nauta-muted);
+  line-height: 1.55;
+  padding-left: 14px;
+  border-left: 2px solid rgba(74,108,247,0.25);
+  margin-top: 6px;
+}
+.feature-baseline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 10px 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.feature-baseline.state-ok  { background: rgba(22,163,74,0.10);  color: var(--ok);  border-color: rgba(22,163,74,0.25); }
+.feature-baseline.state-wip { background: rgba(217,119,6,0.10);  color: var(--pen); border-color: rgba(217,119,6,0.25); }
+.feature-baseline.state-pen { background: rgba(220,38,38,0.08);  color: var(--blk); border-color: rgba(220,38,38,0.20); }
+.feature-baseline.state-blk { background: rgba(74,108,247,0.10); color: var(--wip); border-color: rgba(74,108,247,0.25); }
+.feature-baseline .baseline-status {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 10px;
+  opacity: 0.85;
+}
+.feature-baseline .baseline-value {
+  font-weight: 600;
+}
+.feature-baseline .baseline-value:empty { display: none; }
+
+/* Baseline legend */
+.baseline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: var(--nauta-card);
+  border: 1px solid var(--nauta-border);
+  border-radius: 10px;
+  font-size: 11.5px;
+}
+.baseline-legend .legend-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nauta-muted);
+  font-size: 10.5px;
+  margin-right: 6px;
+  align-self: center;
+}
+.baseline-legend .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--nauta-bg);
+  color: var(--nauta-text);
+  font-weight: 500;
+}
+.feature-subs {
+  margin-top: 8px;
+  padding-left: 0;
+  list-style: none;
+}
+.feature-subs li {
+  position: relative;
+  padding: 3px 0 3px 16px;
+  font-size: 12.5px;
+  color: var(--nauta-muted);
+  line-height: 1.5;
+  border: none;
+}
+.feature-subs li:before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--nauta-blue);
+  font-weight: 700;
+}
+
+table.tasks { width: 100%; border-collapse: collapse; }
+table.tasks thead th {
+  text-align: left; padding: 10px 14px;
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--nauta-muted);
   background: var(--nauta-bg);
   font-weight: 700;
   border-bottom: 1px solid var(--nauta-border);
 }
 table.tasks tbody td {
-  padding: 10px 14px;
-  font-size: 13px;
+  padding: 10px 14px; font-size: 13px;
   border-bottom: 1px solid var(--nauta-bg);
   vertical-align: top;
 }
@@ -251,38 +331,40 @@ table.tasks tbody tr:hover { background: var(--nauta-bg); }
 .pill.pen { background: rgba(217,119,6,0.12);  color: var(--pen); }
 
 .empty {
-  padding: 28px;
-  color: var(--nauta-muted);
-  font-style: italic;
-  font-size: 13px;
-  text-align: center;
+  padding: 28px; color: var(--nauta-muted);
+  font-style: italic; font-size: 13px; text-align: center;
 }
 
 .stage-chip {
   display: inline-block;
   background: rgba(74,108,247,0.10);
   color: var(--nauta-blue);
-  font-weight: 600;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 99px;
+  font-weight: 600; font-size: 12px;
+  padding: 4px 10px; border-radius: 99px;
 }
 .handover-chip {
   display: inline-block;
   background: rgba(22,163,74,0.12);
   color: var(--ok);
-  font-weight: 600;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 99px;
+  font-weight: 600; font-size: 12px;
+  padding: 4px 10px; border-radius: 99px;
   margin-left: 6px;
 }
+.status-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 12px; font-weight: 600;
+  margin-left: 6px;
+}
+.status-chip.ok  { background: rgba(22,163,74,0.12); color: var(--ok); }
+.status-chip.wip { background: rgba(74,108,247,0.12); color: var(--wip); }
+.status-chip.blk { background: rgba(220,38,38,0.12); color: var(--blk); }
+.status-chip.pen { background: rgba(217,119,6,0.12); color: var(--pen); }
 
 footer {
-  padding: 16px 28px;
-  font-size: 11px;
-  color: var(--nauta-muted);
-  text-align: center;
+  padding: 16px 28px; font-size: 11px;
+  color: var(--nauta-muted); text-align: center;
   border-top: 1px solid var(--nauta-border);
   background: var(--nauta-card);
 }
@@ -297,10 +379,10 @@ footer {
     <span class="product">Implementation Tracker</span>
   </div>
   <div class="topbar-stats">
-    <span>Clientes activos · <b>11</b></span>
-    <span>Tareas totales · <b>45</b></span>
-    <span>Tareas abiertas · <b>43</b></span>
-    <span>Actualizado · <b>2026-05-11 22:53</b></span>
+    <span>Clientes activos · <b>12</b></span>
+    <span>Tareas totales · <b>52</b></span>
+    <span>Tareas abiertas · <b>52</b></span>
+    <span>Actualizado · <b>2026-05-18 17:45</b></span>
   </div>
 </div>
 
@@ -318,7 +400,7 @@ footer {
 </footer>
 
 <script>
-const DATA = [{"n": "CIB", "k": "cib", "st": "1. Kick-Off & Discovery", "sx": "En Progreso", "p": 10, "handover": "", "blocker": "", "next_action": "", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "", "tasks": [{"t": "Recibir información del cliente", "r": "Cliente", "d": "2026-05-22", "o": "", "s": "Pendiente", "p": "", "ri": "", "ns": "Kick Off en Mayo", "lw": ""}, {"t": "Synch", "r": "Nauta/Cliente", "d": "2026-05-26", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Go Live", "r": "Nauta/Cliente", "d": "2026-06-02", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover", "r": "Nauta/Cliente", "d": "2026-06-23", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 4, "open_task_count": 4, "risks": [], "next_steps": ["Kick Off en Mayo"], "last_week": []}, {"n": "FLATBOX", "k": "flatbox", "st": "1. Kick-Off & Discovery", "sx": "En Progreso", "p": 15, "handover": "", "blocker": "", "next_action": "", "pain_points": "- Container tracking , eta follow up · - Documentation follow up", "ob_lead": "Santiago Suarez", "kam": "", "tasks": [{"t": "Recopilando info para crear cuenta", "r": "", "d": "", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Synch", "r": "", "d": "2026-05-15", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Ficha tecnica", "r": "", "d": "2026-05-12", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Go Live", "r": "", "d": "2026-05-22", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover", "r": "", "d": "2026-06-19", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 5, "open_task_count": 5, "risks": [], "next_steps": [], "last_week": []}, {"n": "FINE WINES", "k": "fine-wines", "st": "2. Kick-Off & Configuración", "sx": "En Progreso", "p": 25, "handover": "", "blocker": "", "next_action": "", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "", "tasks": [{"t": "Diagnosis y Go Live", "r": "Nauta", "d": "2026-05-13", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover due date", "r": "Cliente/Nauta", "d": "2026-06-03", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 2, "open_task_count": 2, "risks": [], "next_steps": [], "last_week": []}, {"n": "PATIO GALLERY", "k": "patio-gallery", "st": "2. Kick-Off & Configuración", "sx": "Bloqueado", "p": 20, "handover": "Delayed", "blocker": "Esperando que el cliente envíe datos", "next_action": "Follow-up Feb 23 con cliente para recibir data", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "Por asignar", "tasks": [{"t": "Reunión Go Live postpiuesta, no ha llegado data", "r": "Cliente", "d": "2026-05-14", "o": "Santiago Suarez", "s": "En Progreso", "p": "", "ri": "", "ns": "Diagnostico", "lw": ""}, {"t": "Data diagnosis", "r": "Nauta/Cliente", "d": "2026-05-14", "o": "Santiago Suarez", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Pendiente crear nuevos tipos de doc y recibir sus ejemplos QC CONTAINER CHECKLIST · TASCA · LACEY ACT", "r": "Nauta/Cliente", "d": "", "o": "", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 3, "open_task_count": 3, "risks": [], "next_steps": ["Diagnostico"], "last_week": []}, {"n": "SUPERMERCADOS SELECTOS", "k": "supermercados-selectos", "st": "3. Go-Live & Compromisos", "sx": "En Progreso", "p": 60, "handover": "", "blocker": "Esperando por reunión Feb 24", "next_action": "Pedir información, mapear flujos", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "Por asignar", "tasks": [{"t": "Cluster PO para agregar cc Clase", "r": "Nauta", "d": "2026-05-11", "o": "Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Crear Rules en Ask Nauta para: Doc faltante, Cont arribando y Free Time", "r": "Cliente", "d": "", "o": "Santiago Suarez", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover Interno", "r": "Nauta", "d": "2026-05-15", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover Externo", "r": "Nauta", "d": "2026-05-22", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 4, "open_task_count": 4, "risks": [], "next_steps": [], "last_week": []}, {"n": "PAN AMERICAN GRAIN", "k": "pan-american-grain", "st": "4. Go-Live Capacitación & Adopción", "sx": "En Progreso", "p": 20, "handover": "Delayed", "blocker": "Seguimiento uso de Nauta", "next_action": "Nueva llamada W Feb 23 para revisar uso", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "Por asignar", "tasks": [{"t": "Cancelaron la automatización - Escalar con Sales para nuevo champion y proceso", "r": "Nauta/Cliente", "d": "2026-03-16", "o": "Santiago Suarez Rafa Santiago", "s": "En Progreso", "p": "", "ri": "Engagement", "ns": "Sales escalation", "lw": ""}, {"t": "Conversación con Sebastian sobre permisos", "r": "Nauta/Cliente", "d": "2026-04-01", "o": "Santiago Suarez Rafa Santiago", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 2, "open_task_count": 2, "risks": ["Engagement"], "next_steps": ["Sales escalation"], "last_week": []}, {"n": "IMCD PR", "k": "imcd-pr", "st": "7. Handover Interno", "sx": "En Progreso", "p": 80, "handover": "Delayed", "blocker": "Zip files processing, formatos PO, capacitaciones individuales pendientes", "next_action": "Nuevas capacitaciones individuales con más data y reportes por área", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "", "tasks": [{"t": "Externar Handover to Customer Success", "r": "Nauta", "d": "2026-05-13", "o": "Santiago Suarez Isabel Restrepo", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Cluster de PO con Custom Columns: Unit of Measure y Pick up site + agregar a ficha tecnica", "r": "", "d": "", "o": "Pablo Abel Vanessa Becerra", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 2, "open_task_count": 2, "risks": [], "next_steps": [], "last_week": []}, {"n": "INTERNATIONAL MATERIALS", "k": "international-materials", "st": "7. Handover Interno", "sx": "En Progreso", "p": 80, "handover": "TBD", "blocker": "", "next_action": "", "pain_points": "", "ob_lead": "", "kam": "", "tasks": [{"t": "Recibir feedback despues de la corrección en App", "r": "Nauta/Cliente", "d": "2026-06-04", "o": "Santiago Suarez German Mendoza Valentina Jordan", "s": "En Progreso", "p": "Alta", "ri": "Lectura Data", "ns": "Presentar Mock up, mejorar tiempos y avanzar en automatización. Entrenar Hodor con Weight Tickets", "lw": ""}, {"t": "Desarrollar resto de validaciones con la funcionalidad de Pangea", "r": "Nauta/Cliente", "d": "", "o": "Santiago Suarez", "s": "Pendiente", "p": "Alta", "ri": "", "ns": "Plan Handover 2 - Mejorar tiempos por revisión documental", "lw": ""}, {"t": "Abr 17 - Error de 24 documentos no procesados y casos de mezcla de informacion", "r": "Nauta", "d": "?", "o": "Gerardo Lozano Pablo Abel", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "External Handover to Customer Success", "r": "Nauta", "d": "2026-05-13", "o": "Santiago Suarez Isabel Restrepo", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Entrenar a Hodor Weight Tickets", "r": "Nauta", "d": "2026-05-11", "o": "Vanessa Becerra", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 5, "open_task_count": 5, "risks": ["Lectura Data"], "next_steps": ["Plan Handover 2 - Mejorar tiempos por revisión documental", "Presentar Mock up, mejorar tiempos y avanzar en automatización. Entrenar Hodor con Weight Tickets"], "last_week": []}, {"n": "PIAZZA INTERNATIONAL", "k": "piazza-international", "st": "7. Handover Interno", "sx": "En Progreso", "p": 80, "handover": "TBD", "blocker": "Esperando para empezar entrenamientos", "next_action": "Programar sesiones de entrenamiento y entregar valor", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "Por asignar", "tasks": [{"t": "External Handover to Customer Success", "r": "Nauta", "d": "2026-05-11", "o": "Santiago Suarez Isabel Restrepo", "s": "Pendiente", "p": "", "ri": "", "ns": "Plan Handover 1 - Intro CS y push por arreglo en SAP cliente", "lw": ""}, {"t": "Confirmar organización de campos multiples despachos", "r": "Cliente", "d": "2026-03-16", "o": "Santiago Suarez", "s": "En Progreso", "p": "", "ri": "Cadencia en reuniones", "ns": "", "lw": ""}, {"t": "Implementar otras empresas con esta empresa como caso de exito", "r": "Nauta", "d": "2026-05-15", "o": "Haim Perets", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Reunión capacitación y Handover", "r": "Nauta", "d": "2026-05-12", "o": "Santiago Suarez Isabel Restrepo", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 4, "open_task_count": 4, "risks": ["Cadencia en reuniones"], "next_steps": ["Plan Handover 1 - Intro CS y push por arreglo en SAP cliente"], "last_week": []}, {"n": "PR SUPPLIES", "k": "pr-supplies", "st": "7. Handover Interno", "sx": "En Progreso", "p": 80, "handover": "Delayed", "blocker": "Custom columns API, Transportation Type, Buyer/Owner ajuste", "next_action": "SOW revisado, custom columns en API, ajustar Buyers", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "", "tasks": [{"t": "Extracción Custom Broker - Entrenar Hodor", "r": "Nauta", "d": "2026-05-12", "o": "Gerardo Lozano Vanessa Becerra", "s": "Pendiente", "p": "Alta", "ri": "", "ns": "", "lw": ""}, {"t": "Extracción Fiscal data - Entrenar Hodor - adelantada", "r": "Nauta", "d": "2026-04-08", "o": "Pablo Abel Gerardo Lozano", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Calidad en Extracción de Manifiestos", "r": "Nauta", "d": "2026-05-12", "o": "Gerardo Lozano Jose Incera Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Calidad en Extracción de Excel: O tipo de doc nuevo o cluster por tipo de doc Other", "r": "Nauta", "d": "2026-05-13", "o": "Gerardo Lozano Jose Incera Vanessa Becerra", "s": "En Progreso", "p": "Alta", "ri": "", "ns": "", "lw": ""}, {"t": "Confirmar días libres pendientes: Bacardí, Mondelez USA (negociando contrato), Flora — esperando respuesta del cliente", "r": "Cliente", "d": "", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Scroll down Matriz Free Time", "r": "Nauta", "d": "", "o": "Pablo Abel", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Ticket: Contenedores que SeaRates responde y la Naviera no", "r": "Nauta", "d": "", "o": "Pablo Abel", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Data Quality - Revisión alertas y flujo entre Bernardo y robertinho para queues null pero Relevantes", "r": "Nauta", "d": "", "o": "Gerardo Lozano Vanessa Becerra Jhoyner Martinez", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "External Handover to Customer Success", "r": "Nauta", "d": "2026-05-15", "o": "Santiago Suarez Isabel Restrepo", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "CWO - deep dive 2", "r": "Nauta", "d": "2026-05-12", "o": "Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 10, "open_task_count": 10, "risks": [], "next_steps": [], "last_week": []}, {"n": "SEAWORLD", "k": "seaworld", "st": "7. Handover Interno", "sx": "En Progreso", "p": 80, "handover": "Ready to handover", "blocker": "Jose David debe sincronizar el correo", "next_action": "Follow-up sincronización correo con Jose David", "pain_points": "", "ob_lead": "Santiago Suarez", "kam": "Por asignar", "tasks": [{"t": "Extracción de Incoterm de la PO - Hodor entrenado", "r": "Nauta", "d": "2026-05-11", "o": "Vanessa Becerra", "s": "Completada", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Workflow Finanzas segun payment terms", "r": "Cliente", "d": "2026-05-12", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "External Handover to Customer Success", "r": "Nauta", "d": "2026-05-11", "o": "Santiago Suarez Isabel Restrepo", "s": "Completada", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover Externo", "r": "", "d": "2026-05-11", "o": "", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 4, "open_task_count": 2, "risks": [], "next_steps": [], "last_week": []}];
+const DATA = [{"n": "CIB", "k": "cib", "st": "2. Kick-Off & Configuración", "sx": "En Progreso", "p": 20, "handover": "", "target_ho": "2026-06-23", "go_live": "", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "Recibir información del cliente", "r": "Cliente", "d": "2026-05-22", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "Go Live finales Mayo", "lw": ""}, {"t": "Synch", "r": "Nauta/Cliente", "d": "2026-05-26", "o": "Santiago Suarez", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Go Live", "r": "Nauta/Cliente", "d": "2026-06-02", "o": "Santiago Suarez", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover", "r": "Nauta/Cliente", "d": "2026-06-23", "o": "Santiago Suarez", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 4, "open_task_count": 4, "risks": [], "next_steps": ["Go Live finales Mayo"], "last_week": [], "pains": [], "kpi": []}, {"n": "FLATBOX", "k": "flatbox", "st": "2. Kick-Off & Configuración", "sx": "En Progreso", "p": 20, "handover": "", "target_ho": "2026-06-19", "go_live": "", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "Synch", "r": "Nauta/Cliente", "d": "2026-05-19", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Ficha tecnica", "r": "", "d": "2026-05-18", "o": "Santiago Suarez", "s": "En Progreso", "p": "", "ri": "", "ns": "Synch y DIagnostico, alinear expectativas segun data structure", "lw": ""}, {"t": "Go Live", "r": "", "d": "2026-05-26", "o": "Santiago Suarez", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover", "r": "", "d": "2026-06-19", "o": "Santiago Suarez Isabel Restrepo", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 4, "open_task_count": 4, "risks": [], "next_steps": ["Synch y DIagnostico, alinear expectativas segun data structure"], "last_week": [], "pains": [{"n": "1", "main": "Seguimiento proactivo de ETAs", "arrow": "Alertas automáticas ante cambios de itinerario", "baseline": "", "subs": []}, {"n": "2", "main": "Visibilidad de documentos por PO", "arrow": "BL, ISF, FDA, Invoice, Arrival Notice consolidados en un solo lugar", "baseline": "", "subs": []}], "kpi": [{"n": "1", "main": "Tiempo ahorrado en busquedas de ETA:", "arrow": "", "baseline": "", "subs": ["# Containers con ETA reportado x tiempo por contenedor", "# Container con cambio ETA reportado x tiempo por contenedor"], "baseline_emoji": "🟠", "baseline_label": "Sin baseline", "baseline_state": "pen"}, {"n": "2", "main": "Visibilidad de Documentos: Tiempo ahorrado en busqueda y costo ahorrado por retrasos de documentación", "arrow": "", "baseline": "", "subs": ["Contenedores In Transit con Doc completa / Total contenedores In Transit", "# Documentos asociados a una Operación x Tiempo de descarga/guardar/busqueda de doc"], "baseline_emoji": "🟠", "baseline_label": "Sin baseline", "baseline_state": "pen"}]}, {"n": "FINE WINES", "k": "fine-wines", "st": "3. Go-Live & Compromisos", "sx": "En Progreso", "p": 60, "handover": "", "target_ho": "2026-05-22", "go_live": "", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "Handover due date", "r": "Cliente/Nauta", "d": "2026-06-03", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "KPI/Metricas y rules, procesar todas las queues", "lw": ""}, {"t": "Cluster Container Report", "r": "", "d": "2026-05-18", "o": "Vanessa Becerra Gerardo Lozano Alejandra Franco Solorio", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Procesar queues en estado Onboarding - Documentos que el cliente no ve", "r": "Nauta", "d": "2026-05-18", "o": "Gerardo Lozano", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "confirmar con Bárbara los free times exactos por naviera (Hapag, CMA)", "r": "Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Enviar correos/dominios de correos que no se deben procesar como Relevante", "r": "Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Configurar las primeras alertas en Ask Nauta (contenedores en tránsito, free time por vencer, facturas faltantes antes del arribo). -> Tienen nuestro apoyo ante cualquier pregunta", "r": "Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Probar junto con Nauta el reenvío semiautomático de documentos a Bárbara (custom broker) desde Nauta.", "r": "Nauta/Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Tareas Road to Success: TRK 06, Cluster excel Operinter", "r": "Nauta", "d": "", "o": "Jhoyner Martinez Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 8, "open_task_count": 8, "risks": [], "next_steps": ["KPI/Metricas y rules, procesar todas las queues"], "last_week": [], "pains": [{"n": "1", "main": "Seguimiento proactivo de ETAs", "arrow": "Alertas automáticas ante cambios de itinerario", "baseline": "", "subs": []}, {"n": "2", "main": "Control de free times", "arrow": "Alertas antes de vencer los 10 días hábiles para evitar cargos de almacenaje", "baseline": "", "subs": []}, {"n": "3", "main": "Visibilidad de documentos por PO", "arrow": "BL, ISF, FDA, Invoice, Arrival Notice consolidados en un solo lugar", "baseline": "", "subs": []}], "kpi": [{"n": "1", "main": "Tiempo ahorrado en busquedas de ETA", "arrow": "", "baseline": "5 minutos/contenedor", "subs": ["# Containers con ETA reportado x tiempo por contenedor", "# Container con cambio ETA reportado x tiempo por contenedor"], "baseline_emoji": "🟡", "baseline_label": "A calibrar", "baseline_state": "wip"}, {"n": "2", "main": "Control Free Time: Dinero ahorrado y tiempo ahorrado en seguimiento", "arrow": "", "baseline": "Average $3.900/mes", "subs": ["# Contenedores con demoras x $ Demora / Total contenedores", "# Contenedores alertados preventivamente x tiempo por contenedor"], "baseline_emoji": "🟢", "baseline_label": "Confirmado", "baseline_state": "ok"}, {"n": "3", "main": "Visibilidad de Documentos: Tiempo ahorrado en busqueda y costo ahorrado por retrasos de documentación", "arrow": "", "baseline": "", "subs": ["Contenedores arribados con Doc completa / Total contenedores arribados", "# Documentos asociados a una Operación x Tiempo de descarga/guardar/busqueda de doc"], "baseline_emoji": "🟠", "baseline_label": "Sin baseline", "baseline_state": "pen"}]}, {"n": "AC BRAND", "k": "ac-brand", "st": "4. Go-Live Capacitación & Adopción", "sx": "En Progreso", "p": 60, "handover": "", "target_ho": "2026-06-12", "go_live": "", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "Retomar entrenamiento nueva usuaria", "r": "Nauta", "d": "2026-05-19", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "KPI/Metricas por 3 WF, Entrenamiento a nueva usuaria. DQ", "lw": ""}, {"t": "Duplicidad de Containers - 36 CT May 18", "r": "Nauta", "d": "2026-05-18", "o": "Jose Incera Jhoyner Martinez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Definir workflows con KPIs (Reporte semanal ETA, Alerta ISF + Otro Pendiente)", "r": "Nauta", "d": "2026-05-19", "o": "Santiago Suarez Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Cliente de la Orden - Clusters PO · Cluster de PO para ingresar PO Required Dte · Cluster ISF para Supplier Aviko + DOLE", "r": "Nauta", "d": "2026-05-19", "o": "Santiago Suarez Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Medir Pains/KPI: Seguimiento ETA. Checklist Documentación", "r": "Nauta", "d": "2026-05-19", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Cierre de Containers de DOLE una vez hagan Gate Out", "r": "Nauta", "d": "?", "o": "Sebastian Munguia", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 6, "open_task_count": 6, "risks": [], "next_steps": ["KPI/Metricas por 3 WF, Entrenamiento a nueva usuaria. DQ"], "last_week": [], "pains": [], "kpi": []}, {"n": "MIC FOODS", "k": "mic-foods", "st": "4. Go-Live Capacitación & Adopción", "sx": "En Progreso", "p": 60, "handover": "", "target_ho": "", "go_live": "", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "Apoyo tecnico", "r": "Nauta", "d": "2026-03-04", "o": "Santiago Suarez", "s": "En Progreso", "p": "Alta", "ri": "", "ns": "", "lw": ""}], "task_count": 1, "open_task_count": 1, "risks": [], "next_steps": [], "last_week": [], "pains": [], "kpi": []}, {"n": "PAN AMERICAN GRAIN", "k": "pan-american-grain", "st": "4. Go-Live Capacitación & Adopción", "sx": "En Progreso", "p": 20, "handover": "Delayed", "target_ho": "2026-03-19", "go_live": "2026-02-19", "next_action": "", "kam": "Por asignar", "notas": "En monitoreo de adopción. Seguimiento de engagement.", "tasks": [{"t": "La asistente de Rocio se podria ver beneficiada de Nauta?", "r": "Nauta/Cliente", "d": "", "o": "Santiago Suarez Rafa Santiago", "s": "En Progreso", "p": "", "ri": "Engagement", "ns": "Sales escalation", "lw": ""}], "task_count": 1, "open_task_count": 1, "risks": ["Engagement"], "next_steps": ["Sales escalation"], "last_week": [], "pains": [], "kpi": []}, {"n": "PATIO GALLERY", "k": "patio-gallery", "st": "4. Go-Live Capacitación & Adopción", "sx": "Bloqueado", "p": 60, "handover": "Delayed", "target_ho": "2026-05-29", "go_live": "-", "next_action": "", "kam": "Por asignar", "notas": "En Kick-Off. Pendiente recibir información del cliente.", "tasks": [{"t": "Pendiente crear nuevos tipos de doc y recibir sus ejemplos QC CONTAINER CHECKLIST · TASCA · LACEY ACT", "r": "Nauta/Cliente", "d": "", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "KPI/Metricas con sus automations y capacitaciones a todo el equipo", "lw": ""}, {"t": "Configurar alertas ETAs, checklist documental, free times", "r": "Nauta/Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 2, "open_task_count": 2, "risks": [], "next_steps": ["KPI/Metricas con sus automations y capacitaciones a todo el equipo"], "last_week": [], "pains": [{"n": "1", "main": "Seguimiento proactivo de ETAs y transbordos", "arrow": "Alertas automáticas ante cambios de itinerario", "baseline": "", "subs": []}, {"n": "2", "main": "Visibilidad de documentos por Contenedor", "arrow": "BL, ISF,Certificates, Invoice, Arrival Notice consolidados en un solo lugar", "baseline": "", "subs": []}, {"n": "3", "main": "Control de free times", "arrow": "Alertas antes de vencer los 10 días hábiles para evitar cargos de almacenaje", "baseline": "", "subs": []}], "kpi": [{"n": "1", "main": "Tiempo ahorrado en busquedas de ETA", "arrow": "", "baseline": "5 minutos/contenedor", "subs": ["# Containers con ETA reportado x tiempo por contenedor", "# Container con cambio ETA reportado x tiempo por contenedor"], "baseline_emoji": "🟡", "baseline_label": "A calibrar", "baseline_state": "wip"}, {"n": "2", "main": "Control Free Time: Dinero ahorrado y tiempo ahorrado en seguimiento", "arrow": "", "baseline": "", "subs": ["# Contenedores con demoras x $ Demora / Total contenedores", "# Contenedores alertados preventivamente x tiempo por contenedor"], "baseline_emoji": "🟠", "baseline_label": "Sin baseline", "baseline_state": "pen"}, {"n": "3", "main": "Visibilidad de Documentos: Tiempo ahorrado en busqueda y costo ahorrado por retrasos de documentación", "arrow": "", "baseline": "", "subs": ["Contenedores arribados con Doc completa / Total contenedores arribados", "# Documentos asociados a una Operación x Tiempo de descarga/guardar/busqueda de doc"], "baseline_emoji": "🟠", "baseline_label": "Sin baseline", "baseline_state": "pen"}]}, {"n": "PIAZZA INTERNATIONAL", "k": "piazza-international", "st": "4. Go-Live Capacitación & Adopción", "sx": "En Progreso", "p": 80, "handover": "TBD", "target_ho": "2026-06-05", "go_live": "2026-03-01", "next_action": "", "kam": "Por asignar", "notas": "Go-Live completado. Listo para training.", "tasks": [{"t": "Definir los KPIs de mejora: Excel trafico y excel pagos - que mas · Capacitaciones · Reglas dentro de su workflow", "r": "Nauta", "d": "2026-05-11", "o": "Santiago Suarez Isabel Restrepo", "s": "Pendiente", "p": "", "ri": "", "ns": "KPI/Metricas con sus automations y capacitaciones a todo el equipo", "lw": ""}, {"t": "Implementar otras empresas con esta empresa como caso de exito", "r": "Nauta", "d": "2026-05-15", "o": "Haim Perets Rafa Santiago Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Pain 3: Todas las facturas con Payment Terms -> Cluster de 12 dominios", "r": "Nauta", "d": "2026-05-15", "o": "Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Definir alertas segun flujos manuales", "r": "Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Filtros Dinamicos por Destino", "r": "Cliente/Nauta", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "External Handover", "r": "Nauta", "d": "2026-06-09", "o": "Santiago Suarez Isabel Restrepo", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 6, "open_task_count": 6, "risks": [], "next_steps": ["KPI/Metricas con sus automations y capacitaciones a todo el equipo"], "last_week": [], "pains": [{"n": "1", "main": "Seguimiento proactivo de ETA -", "arrow": "", "baseline": "", "subs": []}, {"n": "2", "main": "Identificar diferencias entre Order y Factura", "arrow": "", "baseline": "", "subs": []}, {"n": "3", "main": "Visibilidad de Terminos de Pago por Factura", "arrow": "", "baseline": "", "subs": []}], "kpi": []}, {"n": "SUPERMERCADOS SELECTOS", "k": "supermercados-selectos", "st": "5. Monitoreo & Optimización KPI", "sx": "En Progreso", "p": 80, "handover": "", "target_ho": "2026-05-22", "go_live": "2026-04-24", "next_action": "", "kam": "Por asignar", "notas": "Go-Live completado. Listo para training.", "tasks": [{"t": "Cluster PO revisar multiples Clases - segun ejemplos", "r": "Cliente/Nauta", "d": "2026-05-11", "o": "Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "KPI/Metricas con sus automations y capacitaciones a todo el equipo. procesar todas las queues", "lw": ""}, {"t": "Confirmar el equipo que va a estar encargado de la validación 📦 Inbound con Nauta, entre Facturas y P", "r": "Cliente", "d": "2026-05-21", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Procesar queues en estado Onboarding - Facturas que el cliente no ve", "r": "Cliente", "d": "2026-05-19", "o": "Gerardo Lozano", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover Interno", "r": "Nauta", "d": "2026-05-15", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Handover Externo", "r": "Nauta", "d": "2026-05-22", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 5, "open_task_count": 5, "risks": [], "next_steps": ["KPI/Metricas con sus automations y capacitaciones a todo el equipo. procesar todas las queues"], "last_week": [], "pains": [{"n": "1", "main": "Inbound: comparación y seguimiento de productos entre orden de compra y factura.", "arrow": "", "baseline": "", "subs": []}, {"n": "2", "main": "Trackingend-to-end: desde la creación del PO hasta la devolución del contenedor.", "arrow": "", "baseline": "", "subs": []}, {"n": "3", "main": "Free time: seguimiento con estándar de 7 días seco y 5 días frio, con alertas para evitar demoras.", "arrow": "", "baseline": "", "subs": []}], "kpi": [{"n": "1", "main": "Hoy en dia no se mide, asi que vamos a crear un Baseline y definir champions", "arrow": "", "baseline": "", "subs": [], "baseline_emoji": "🟠", "baseline_label": "A capturar", "baseline_state": "pen"}, {"n": "2", "main": "Tiempo ahorrado en busquedas de ETA", "arrow": "", "baseline": "5 minutos/contenedor", "subs": ["# Containers con ETA reportado x tiempo por contenedor", "# Container con cambio ETA reportado x tiempo por contenedor"], "baseline_emoji": "🟡", "baseline_label": "A calibrar", "baseline_state": "wip"}, {"n": "3", "main": "Control Free Time: Dinero ahorrado y tiempo ahorrado en seguimiento", "arrow": "", "baseline": "Average $6.000/mes", "subs": ["# Contenedores con demoras x $ Demora / Total contenedores", "# Contenedores alertados preventivamente x tiempo por contenedor"], "baseline_emoji": "🟢", "baseline_label": "Confirmado", "baseline_state": "ok"}]}, {"n": "BIDCOM", "k": "bidcom", "st": "7. Handover Interno", "sx": "En Progreso", "p": 95, "handover": "Ready to handover", "target_ho": "2026-05-22", "go_live": "2026-03-20", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "External Handover to Customer Success - escalando con Sales, no confirman fecha para reunión ni confirman el desarrollo del gsheets", "r": "Nauta", "d": "2026-05-08", "o": "Santiago Suarez Isabel Restrepo", "s": "En Progreso", "p": "", "ri": "", "ns": "Escalar Handover + Feedback GSheets", "lw": ""}, {"t": "Normal un aumento del 137% en emails WoW?", "r": "Nauta", "d": "2026-05-22", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 2, "open_task_count": 2, "risks": [], "next_steps": ["Escalar Handover + Feedback GSheets"], "last_week": [], "pains": [], "kpi": []}, {"n": "PR SUPPLIES", "k": "pr-supplies", "st": "7. Handover Interno", "sx": "En Progreso", "p": 90, "handover": "Delayed", "target_ho": "2026-05-22", "go_live": "Ene 6", "next_action": "", "kam": "", "notas": "Integración API en progreso. Campos TCC fuera del SOW original.", "tasks": [{"t": "Extracción Custom Broker - Entrenar Hodor", "r": "Nauta", "d": "2026-05-12", "o": "Gerardo Lozano Vanessa Becerra", "s": "Pendiente", "p": "Alta", "ri": "", "ns": "Soporte tecnico a CS, Entrega el viernes y Carrier perfomance report", "lw": ""}, {"t": "Extracción Fiscal data - Entrenar Hodor - adelantada", "r": "Nauta", "d": "2026-04-08", "o": "Pablo Abel Gerardo Lozano", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Calidad en Extracción de Manifiestos", "r": "Nauta", "d": "2026-05-12", "o": "Gerardo Lozano Jose Incera Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Calidad en Extracción de Excel: O tipo de doc nuevo o cluster por tipo de doc Container Report", "r": "Nauta", "d": "2026-05-13", "o": "Gerardo Lozano Jose Incera Vanessa Becerra", "s": "En Progreso", "p": "Alta", "ri": "", "ns": "", "lw": ""}, {"t": "Confirmar días libres pendientes: Bacardí, Mondelez USA (negociando contrato), Flora — esperando respuesta del cliente", "r": "Cliente", "d": "", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Ticket: Contenedores que SeaRates responde y la Naviera no", "r": "Nauta", "d": "", "o": "Pablo Abel", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Data Quality - Revisión alertas y flujo entre Bernardo y robertinho para queues null pero Relevantes", "r": "Nauta", "d": "", "o": "Gerardo Lozano Vanessa Becerra Jhoyner Martinez", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "CWO - deep dive 2", "r": "Nauta", "d": "2026-05-12", "o": "Vanessa Becerra", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Normal una caida del 47% en emails WoW?", "r": "Nauta", "d": "2026-05-22", "o": "Santiago Suarez", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}, {"t": "Agregar seal_number a la API Containers para que pueda extraerlo a su TCC", "r": "Nauta", "d": "", "o": "Pablo Abel", "s": "Pendiente", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 10, "open_task_count": 10, "risks": [], "next_steps": ["Soporte tecnico a CS, Entrega el viernes y Carrier perfomance report"], "last_week": [], "pains": [], "kpi": []}, {"n": "INTERNATIONAL MATERIALS", "k": "international-materials", "st": "9. HO Externo + Seguimiento OB", "sx": "En Progreso", "p": 85, "handover": "TBD", "target_ho": "2026-05-13", "go_live": "2026-09-29", "next_action": "", "kam": "", "notas": "", "tasks": [{"t": "Recibir feedback despues de la corrección en App - Foco en uso · Avance en metrica de impacto por tiempo ahorrado segun validación y correos", "r": "Nauta/Cliente", "d": "2026-05-21", "o": "Santiago Suarez Sebastian Munguia", "s": "En Progreso", "p": "Alta", "ri": "Lectura Data", "ns": "Feedback, metricas y nuevas validaciones desde Pangea", "lw": ""}, {"t": "Desarrollar resto de validaciones con la funcionalidad de Pangea", "r": "Nauta/Cliente", "d": "", "o": "Santiago Suarez", "s": "Pendiente", "p": "Alta", "ri": "", "ns": "", "lw": ""}, {"t": "Entrenar a Hodor Weight Tickets", "r": "Nauta", "d": "2026-05-11", "o": "Vanessa Becerra", "s": "En Progreso", "p": "", "ri": "", "ns": "", "lw": ""}], "task_count": 3, "open_task_count": 3, "risks": ["Lectura Data"], "next_steps": ["Feedback, metricas y nuevas validaciones desde Pangea"], "last_week": [], "pains": [], "kpi": []}];
 
 function statusClass(s) {
   s = (s || '').toLowerCase();
@@ -342,6 +424,7 @@ function renderSidebar(activeK) {
         <span>${esc(c.st)}</span>
         <span><b>${c.p}%</b></span>
       </div>
+      ${c.target_ho ? `<div class="ho-date">Handover: ${esc(c.target_ho)}</div>` : ''}
       <div class="bar"><div style="width:${c.p}%"></div></div>
     </div>
   `).join('');
@@ -356,21 +439,53 @@ function renderClient(k) {
   renderSidebar(k);
   const m = document.getElementById('main');
   const handoverChip = c.handover ? `<span class="handover-chip">${esc(c.handover)}</span>` : '';
+  const statusChipClass = statusClass(c.sx);
+  const statusChip = c.sx ? `<span class="status-chip ${statusChipClass}">${esc(c.sx)}</span>` : '';
 
-  // Always-shown cards: etapa + blocker (con "sin bloqueos" cuando vacío es útil).
-  // Resto: solo se muestran si tienen valor real.
+  // Highlight cards (always-shown): Etapa + Target Handover + Status
   const cards = [
-    { h: 'Etapa', v: `<span class="stage-chip">${esc(c.st)}</span>${handoverChip}`, always: true },
-    { h: 'OB Lead',           v: esc(c.ob_lead) },
+    { h: 'Etapa', v: `<span class="stage-chip">${esc(c.st)}</span>${handoverChip}`, always: true, highlight: true },
+    { h: 'Target Handover Externo', v: c.target_ho ? `<span class="val big">${esc(c.target_ho)}</span>` : '<span class="val muted">sin fecha</span>', always: true, highlight: true },
+    { h: 'Status', v: c.sx ? `<span class="status-chip ${statusChipClass}">${esc(c.sx)}</span>` : '<span class="val muted">—</span>', always: true, highlight: true },
+    { h: 'Go Live',           v: esc(c.go_live) },
     { h: 'KAM',               v: esc(c.kam) },
-    { h: 'Blocker principal', v: esc(c.blocker) || '<span class="val muted">sin bloqueos</span>', always: true },
     { h: 'Siguiente acción',  v: esc(c.next_action) },
-    { h: 'Pain points',       v: esc(c.pain_points) },
   ].filter(x => x.always || (x.v && x.v.trim()));
   const cardsHTML = cards.map(x => `
-    <div class="card"><h4>${x.h}</h4><div class="val">${x.v}</div></div>`).join('');
+    <div class="card${x.highlight ? ' highlight' : ''}"><h4>${x.h}</h4><div class="val">${x.v}</div></div>`).join('');
 
-  // Sections (Next steps / Riesgos / Last week): si no hay items, no se renderiza la sección.
+  // Featured sections: Pains to solve + KPI (numbered items, clean)
+  function featureSection(title, items) {
+    if (!items || !items.length) return '';
+    const rows = items.map(it => {
+      const numLabel = it.n === '•' ? '•' : it.n;
+      const arrow = it.arrow ? `<div class="feature-arrow">→ ${esc(it.arrow)}</div>` : '';
+      const blValue = it.baseline ? esc(it.baseline) : '';
+      const blEmoji = it.baseline_emoji || '';
+      const blLabel = it.baseline_label || '';
+      const blState = it.baseline_state || 'pen';
+      const baseline = (blEmoji || blValue) ? `<div class="feature-baseline state-${blState}"><span>${blEmoji}</span><span class="baseline-status">${esc(blLabel)}</span>${blValue ? `<span class="baseline-value">· ${blValue}</span>` : ''}</div>` : '';
+      const subs = (it.subs && it.subs.length)
+        ? `<ul class="feature-subs">${it.subs.map(s => `<li>${esc(s)}</li>`).join('')}</ul>`
+        : '';
+      return `
+        <div class="feature-item">
+          <span class="feature-num">${esc(numLabel)}</span>
+          <div class="feature-content">
+            <div class="feature-main">${esc(it.main)}</div>
+            ${arrow}
+            ${baseline}
+            ${subs}
+          </div>
+        </div>`;
+    }).join('');
+    return `
+      <div class="section feature">
+        <header><h3>${title}</h3><span class="count">${items.length}</span></header>
+        <div class="feature-list">${rows}</div>
+      </div>`;
+  }
+
   function section(title, items) {
     if (!items.length) return '';
     return `
@@ -412,7 +527,7 @@ function renderClient(k) {
     <div class="client-header">
       <div>
         <h1>${esc(c.n)}</h1>
-        <div class="sub">${esc(c.st)} · ${esc(c.sx)} · ${c.task_count} tareas (${c.open_task_count} abiertas)</div>
+        <div class="sub">${esc(c.st)} ${statusChip} · ${c.task_count} tareas (${c.open_task_count} abiertas)</div>
       </div>
       <div class="progress">
         <div class="pct">${c.p}%</div>
@@ -420,6 +535,16 @@ function renderClient(k) {
       </div>
     </div>
     <div class="cards">${cardsHTML}</div>
+    ${featureSection('Pains to solve',  c.pains)}
+    ${(c.kpi && c.kpi.length) ? `
+    <div class="baseline-legend">
+      <span class="legend-title">Estado Baseline:</span>
+      <span class="legend-item">🟢 Confirmado</span>
+      <span class="legend-item">🟡 A calibrar</span>
+      <span class="legend-item">🟠 A capturar</span>
+      <span class="legend-item">🔵 A tomar Sem 1 op</span>
+    </div>` : ''}
+    ${featureSection('KPI · Beneficio cliente', c.kpi)}
     ${section('Next steps',  c.next_steps)}
     ${section('Riesgos',     c.risks)}
     ${section('Last week',   c.last_week)}
